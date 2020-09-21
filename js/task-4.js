@@ -1,33 +1,12 @@
-class StringBuilder {
-    constructor(value){
-        this._value = value;
-    }
-get value() {
-    return this._value;
-}
-append(str){
-    this._value += str;
-    return this
-}
-prepend(str){
-    this._value = str + this._value;
-    return this
-}
-pad(str){
-    this._value = str + this._value + str;
-    return this
-}
-}
+let vounterValue = 0;
 
-const builder = new StringBuilder('.');
+const button = document.querySelectorAll(`button`);
+const value = document.getElementById(`value`);
+const decrementBtn = button[0];
+const incrementBtn = button[1];
 
-builder.append('^');
-console.log(builder.value); // '.^'
+const decrement = () => (value.textContent = vounterValue -= 1);
+const increment = () => (value.textContent = vounterValue += 1);
 
-builder.prepend('^');
-console.log(builder.value); // '^.^'
-
-builder.pad('=');
-console.log(builder.value); // '=^.^='
-
-console.log(builder.append('^').prepend('^').pad('='));
+decrementBtn.addEventListener(`click`, decrement);
+incrementBtn.addEventListener(`click`, increment);
