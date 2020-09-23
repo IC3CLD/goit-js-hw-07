@@ -8,3 +8,4 @@ const valueToChange = (event) => {
   };
 
 nameInput.addEventListener("input", valueToChange);
+

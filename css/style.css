@@ -1,0 +1,19 @@
+  #validation-input {
+    border: 3px solid #bdbdbd;
+  }
+  
+  #validation-input.valid {
+    border-color: #4caf50;
+  }
+  
+  #validation-input.invalid {
+    border-color: #f44336;
+  }
+
+  .js-alert-valid {
+      color: #4caf50;
+  }
+
+  .js-alert-invalid {
+      color: #f44336;
+  }
